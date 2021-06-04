@@ -1,0 +1,62 @@
+<div class="table-wrapper">
+  <input class="form-control" type="text" name="search" [(ngModel)]="searchValue" autocomplete="off" placeholder="Global search. Search by any property!">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Shipment ID</th>
+        <th scope="col">City</th>
+        <th scope="col">Address Line1</th>
+        <th scope="col">Address Name</th>
+        <th scope="col">Address Phone</th>
+        <th scope="col">Address Notes</th>
+        <th scope="col">ZIP</th>
+        <th scope="col">Date Created</th>
+        <th scope="col">Date Delivered</th>
+        <th scope="col">Packages</th>
+        <th scope="col">Service Level</th>
+        <th scope="col">Status Delivered</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let shipment of shipments | filter: searchValue | paginate: {itemsPerPage: 10,  currentPage: p} ">
+        <th scope="row">{{shipment.ShimpentId }}</th>
+        <td>{{shipment.AddressCity }}</td>
+        <td>{{shipment.AddressLine1 }}</td>
+        <td>{{shipment.AddressName }}</td>
+        <td>{{shipment.AddressPhone }}</td>
+        <td>{{shipment.AddressNotes }}</td>
+        <td>{{shipment.AddressZIP }}</td>
+        <td>{{shipment.DateCreated }}</td>
+        <td>{{shipment.DateDelivered }}</td>
+        <td>{{shipment.Packages }}</td>
+        <td>{{shipment.ServiceLevel }}</td>
+        <td>{{shipment.StatusDelivered }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+
+<!-- Second option which can be used -->
+<!-- <div class="container" *ngFor="let shipment of shipments">
+  <div class="row">
+      <div class="col-md-2 col-sm-2">
+          <p>{{shipment.ShimpentId }}</p>
+      </div>
+      <div class="col-md-2 col-sm-2">
+        <p>{{shipment.AddressCity }}</p>
+      </div>
+      <div class="col-md-2 col-sm-2">
+        <p>{{shipment.AddressLine1 }}</p>
+      </div>
+      <div class="col-md-2 col-sm-2">
+        <p>{{shipment.AddressName }}</p>
+      </div>
+      <div class="col-md-2 col-sm-2">
+        <p>{{shipment.AddressZIP }}</p>
+      </div>
+      <div class="col-md-2 col-sm-2">
+        <p>{{shipment.DateCreated }}</p>
+      </div>
+  </div>
+</div> -->

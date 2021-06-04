@@ -1,0 +1,19 @@
+<div class="navigation-container">
+  <div class="menu-bar" #navContainer>
+    <nav class="navigation">
+      <ul>
+        <li routerLink="/packages" routerLinkActive="active">{{ "MENU.PACKAGES" | translate}}</li>
+        <li routerLink="/shipping" routerLinkActive="active">{{ "MENU.SHIPPING" | translate}}</li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<div *ngIf="open" class="backdrop" (click)="onOpen()"></div>
+
+<button type="button" class="navbar-toggler" (click)="onOpen()">
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+</button>
+

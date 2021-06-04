@@ -1,0 +1,53 @@
+<div class="form-wrapper">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-10 mx-auto">
+        <form class="form" [formGroup]="newPackageForm" (submit)="addNewPackage()">
+
+          <label for="LocationId">Location Id<span class="span-star">*</span>
+          </label>
+          <input type="text" class="form-control" id="LocationId" pInputText formControlName="LocationId" />
+          <label for="ContainerId">Container Id<span class="span-star">*</span>
+          </label>
+          <input type="text" class="form-control" id="ContainerId" pInputText formControlName="ContainerId" />
+          <label for="DateCreated">Date Created<span class="span-star">*</span>
+          </label>
+          <input type="text" class="form-control" id="DateCreated" pInputText formControlName="DateCreated"
+            autocomplete="false" />
+          <label for="DateRecieved">Date Recieved</label>
+          <input type="text" class="form-control" id="DateRecieved" pInputText formControlName="DateRecieved"
+            autocomplete="false" />
+          <label for="Barcode">Barcode<span class="span-star">*</span>
+          </label>
+          <input type="text" class="form-control" id="Barcode" pInputText formControlName="Barcode" />
+          <label for="HeiStatusRecievedght">Status Recieved</label>
+          <input type="text" class="form-control" id="StatusRecieved" pInputText formControlName="StatusRecieved"
+            autocomplete="false" />
+          <label for="Weight">Weight<span class="span-star">*</span>
+          </label>
+          <input type="text" class="form-control" id="Weight" pInputText formControlName="Weight"
+            autocomplete="false" />
+          <label for="Height">Height<span class="span-star">*</span>
+          </label>
+          <input type="text" class="form-control" id="Height" pInputText formControlName="Height"
+            autocomplete="false" />
+          <label for="Length">Length<span class="span-star">*</span>
+          </label>
+          <input type="text" class="form-control" id="Length" pInputText formControlName="Length"
+            autocomplete="false" />
+          <label for="StatusReadyForDelivery">Status Ready For Delivery<span class="span-star">*</span>
+          </label>
+          <input type="text" class="form-control" id="StatusReadyForDelivery" pInputText
+            formControlName="StatusReadyForDelivery" autocomplete="false" />
+          <label for="StatusDelivered">Status Delivered</label>
+          <input type="text" class="form-control" id="StatusDelivered" pInputText formControlName="StatusDelivered"
+            autocomplete="false" />
+
+          <button type="submit" class="button button-primary mt-4" [disabled]="!newPackageForm.valid">Save
+            Package</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

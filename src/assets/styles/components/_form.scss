@@ -1,0 +1,15 @@
+@import '../base/variables';
+
+.form-wrapper {
+  width: 100%;
+  margin: 1rem auto;
+  padding: 4rem 5rem 4rem 5rem;
+
+  @media screen and (max-width: 576px) {
+    padding: 4rem 2rem 4rem 2rem;
+  }
+}
+
+.p-inputtext, .p-dropdown, .p-multiselect {
+  background-color: #f9f9f9;
+}

@@ -1,0 +1,20 @@
+{
+  "appVersion": "v1",
+  "local": true,
+  "dev": false,
+  "test": false,
+  "production": false,
+  "requestDelay": 0,
+  "api": {
+    "host": "http://localhost",
+    "port": "8082",
+    "prefix": "api"
+  },
+  "role":{
+    "accountUser":"AU",
+    "accountAdmin":"AA",
+    "operations":"OP",
+    "support":"SU",
+    "admin":"AD"
+  }
+}
